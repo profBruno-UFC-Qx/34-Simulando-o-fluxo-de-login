@@ -1,8 +1,8 @@
 # Descrição
 
-Neste exercício, você vai criar uma função que recebe informações sobre um Pokémon e retorna um objeto que o representa.
+Neste exercício, vaamos implementar um fluxo fíctcio de login usando `promises`.
 
-Objetivo desse exercício é praticar a criação de funções e objetos em JavaScript. 
+Objetivo desse exercício é praticar a manipulação de `promises`. 
 
 **Todas as alterações devem ser feitas nos arquivos já existentes**
 
@@ -10,29 +10,11 @@ Objetivo desse exercício é praticar a criação de funções e objetos em Java
 
 ## Instruções:
 
-1. Crie uma função chamada `criarPokemon` que aceita quatro argumentos: 
-  - nome (string), tipo (string), nivel (number) e hp (number).
-2. Dentro da função, crie um objeto vazio chamado pokemon.
-3. Adicione as seguintes propriedades ao objeto pokemon com base nos argumentos recebidos:
-  - `nome`: Nome do Pokémon (string).
-  - `tipo`: Tipo do Pokémon (string).
-  - `nivel`: Nível do Pokémon (number).
-  - `hp`: Pontos de vida do Pokémon (number).
-4. Retorne o objeto pokemon preenchido.
-5. Fora da função, chame `criarPokemon()` passando valores fictícios como argumentos e armazene o objeto resultante.
-6. Exiba o objeto resultante no console.
-
-
-Exemplo de criação da função e chamada:
-
-```javascript
-function criarPokemon(nome, tipo, nivel, hp) {
-  ...
-}
-
-const meuPokemon = criarPokemon("Pikachu", "Elétrico", 25, 80);
-console.log(meuPokemon);
-```
-Dica: 
-
-- Use os argumentos passados para a função para preencher as propriedades do Pokémon.
+1. Crie uma função chamada `verificarUsuario` que retorna uma Promise que simula a verificação de um nome de usuário.
+  - Para simplificar a implementação a função deve resolver a `promise` quando o o nume de usuário informando for `sucesso@mail.com`, caso contrário a `promise` deve ser rejeitada.
+2. Crie outra função chamada `verificarSenha` que retorna uma Promise que simula a verificação da senha.
+  - Considere que a senha correta é 123456
+3. Crie outra função chamado `login` que deve receber o email do usário e a senha como argumentos.
+4. Dentro desta função, encadeie as Promises usando `.then()` para simular um fluxo de autenticação, onde a primeira Promise representa a verificação do nome de usuário e a segunda Promise representa a verificação da senha.
+5. Use `.then()` e `.catch()`para lidar com o resultado do fluxo de autenticação.
+6. Caso o usuário informe usuário e senha corretamente, a função deve retornar true, caso contrário ela deve lançar uma exceção.
