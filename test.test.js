@@ -34,9 +34,9 @@ test('Verificando a senha correta de um usuário válido', async () => {
 })
 
 
-// test('Usuário válido com senha incorreta', async () => {
-//   await expect(funcs.login('sucesso@mail.com', 'dsadasda')).toMatch('Usuário ou senha inválidos')
-// })
+test('Usuário válido com senha incorreta', async () => {
+  await expect(funcs.login('sucesso@mail.com', 'dsadasda')).rejects.toThrow('Usuário ou senha inválidos')
+})
 
 test('Usuário válido com senha correta', async () => {
   await expect(funcs.login('sucesso@mail.com', '123456')).resolves.toBe('Login realizado com sucesso')

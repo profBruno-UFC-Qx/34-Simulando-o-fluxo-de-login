@@ -17,4 +17,4 @@ Objetivo desse exercício é praticar a manipulação de `promises`.
 3. Crie outra função chamado `login` que deve receber o email do usário e a senha como argumentos.
 4. Dentro desta função, encadeie as Promises usando `.then()` para simular um fluxo de autenticação, onde a primeira Promise representa a verificação do nome de usuário e a segunda Promise representa a verificação da senha.
 5. Use `.then()` e `.catch()`para lidar com o resultado do fluxo de autenticação.
-6. Caso o usuário informe usuário e senha corretamente, a função deve retornar a segunite mensagem *Login realizado com sucesso*, caso contrário ela deve retorna a mensagem *Usuário ou senha inválidos*.
+6. Caso o usuário informe usuário e senha corretamente, a função deve retornar a segunite mensagem *Login realizado com sucesso*, caso contrário ela deve lançar uma exceção com a mensagem *Usuário ou senha inválidos*.
